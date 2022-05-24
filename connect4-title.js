@@ -4,9 +4,12 @@ function rb() {
     var chooseColor = counter;
     switch (chooseColor) {
         case 0:
-            color = "red";
+            color = "blue";
             break;
         case 1:
+            color = "red";
+            break;
+        case 2:
             color = "blue";
             break;
         case 3:
@@ -26,16 +29,24 @@ function rb() {
 }
 
 let letters = document.querySelectorAll("span");
+let charArr = Array.from(letters);
 var changeColors = setInterval(function () {
-    for (let i = 0; i < letters.length; i++) {
-        letters[i].style.color = rb();
+    for (let i = 0; i < charArr.length; i++) {
+        charArr[i].style.color = rb();
         counter++;
-        if (counter > 6) {
+        if (counter > 8) {
             counter = 0;
         }
     }
     setTimeout(function () {
         clearInterval(changeColors);
         counter = 0;
+        for (let i = 0; i < charArr.length; i++) {
+            charArr[i].style.color = rb();
+            counter++;
+            if (counter > 7) {
+                counter = 0;
+            }
+        }
     }, 10000);
-}, 500);
+}, 250);
