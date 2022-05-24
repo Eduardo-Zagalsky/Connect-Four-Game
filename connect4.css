@@ -50,11 +50,15 @@
 }
 
 #title {
-  font-size: 30px;
+  font-size: 35px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: blue;
   margin-top: 10px;
   display: flex;
   justify-content: center;
   align-content: center;
+}
+
+html {
+  background-color: darkgray;
 }
