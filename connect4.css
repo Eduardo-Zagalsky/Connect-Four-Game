@@ -17,8 +17,10 @@
   width: 70%;
   height: 70%;
   border-style: groove;
+  position: relative;
   border-width: 7px;
   border-radius: 50%;
+  animation: drop 0.5s;
 }
 
 /* TODO: make pieces red/blue,  depending on player 1/2 piece */
@@ -64,4 +66,26 @@ h1 {
 
 html {
   background-color: rgb(165, 228, 228);
+}
+
+@keyframes drop {
+  0% {
+    top: -250px;
+  }
+
+  25% {
+    top: -200;
+  }
+
+  50% {
+    top: -150;
+  }
+
+  75% {
+    top: -100;
+  }
+
+  100% {
+    top: 0px;
+  }
 }
